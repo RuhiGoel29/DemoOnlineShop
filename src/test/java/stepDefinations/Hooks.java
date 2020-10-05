@@ -17,15 +17,18 @@ public class Hooks {
 	//Initializing driver, setting implicit wait, maximizing browser
 	@Before
 	public void setup(){
+		System.out.println("//////////////////////////START OF SCENARIO//////////////////////////");
 		driver = SingletonDriver.getDriverInstance();
 		BasePage.setDriver(driver); 
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 	
 	@After
 	public void afterScenario() {
 		driver.quit(); // closing all the open browsers
+		System.out.println("///////////////////////////END OF SCENARIO///////////////////////////");
+
 	}
 
 }

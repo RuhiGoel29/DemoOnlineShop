@@ -13,7 +13,7 @@ public class Utilities {
 
 	// This function returns values from config.properties file
 	public static String getConfigValue(String arg) {
-		String value = "";
+		String value = ""; 
 		try {
 			Properties prop = new Properties();
 			FileReader file = new FileReader(System.getProperty("user.dir") + "\\config.properties");
